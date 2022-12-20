@@ -11,4 +11,15 @@ const gameSubject = new BehaviorSubject({
     board: chess.board()
 })
 
-export {gameSubject};
+function move (from, to){
+    console.log(from, to)
+    const legalMove = chess.move({from, to})
+    if(legalMove){
+        gameSubject.next({ board: chess.board() })
+    }
+}
+
+export {
+    gameSubject,
+    move
+};
