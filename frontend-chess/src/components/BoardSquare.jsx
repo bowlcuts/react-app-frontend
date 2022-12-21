@@ -10,12 +10,15 @@ function BoardSquare ({piece, black, position}) {
 
     const [promotion, setPromotion] = useState(null)
 
-    const [ , drop] = useDrop({
+    const [{isOver} , drop] = useDrop({
         accept: 'piece',
         drop: (item) => {
             const [fromPosition] = item.id.split('_')
             handleMove(fromPosition, position)
         },
+        collect: (monitor) => ({
+            isOver: !!monitor.isOver()
+        })
     })
 
     useEffect(() => {
