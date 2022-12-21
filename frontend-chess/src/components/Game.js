@@ -25,7 +25,7 @@ function resetGame() {
 
 function handleMove(from, to){
     const promotions = chess.moves({verbose: true}).filter(m => m.promotion)
-    console.table(promotions)
+    
     if(promotions.some(p => `${p.from}:${p.to}` === `${from}:${to}`)) {
         const pendingPromotion = {from, to, color: promotions[0].color}
         updateGame(pendingPromotion)
@@ -56,7 +56,7 @@ function updateGame(pendingPromotion) {
         board: chess.board(),
         pendingPromotion,
         isGameOver,
-        turn: chess.turn(),
+        // turn: chess.turn(),
         result: isGameOver ? getGameResult() : null
     }
 

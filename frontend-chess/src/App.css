@@ -87,21 +87,40 @@
 
 }
 
-.game-over-text button {
+button {
   background: rgb(34, 34, 34);
   height: 30px;
-  width: 100%;
+  width: 150px;
   border-radius: 7%;
   border: none;
   font-weight: bold;
   color: white;
   transition-duration: 0.4s;
-  margin-top: 30%;
+  margin-top: 30px;
 }
 
-.game-over-text button:hover {
+button:hover {
   background-color: #4CAF50;
   cursor: pointer;
   font-weight: bolder;
 
+}
+
+.new-game-btn  {
+  background: gray;
+  width: 30px;
+  margin-left: 2%;
+  border-radius: 7%;
+  border: none;
+  font-weight: bold;
+  color: white;
+  transition-duration: 0.4s;
+  
+}
+
+.new-game-btn :hover{
+  background-color: #4CAF50;
+  cursor: pointer;
+  font-weight: bolder;
+  
 }

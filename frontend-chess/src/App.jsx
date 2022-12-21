@@ -8,7 +8,7 @@ function App() {
   const [board, setBoard] = useState([]);
   const [isGameOver, setIsGameOver] = useState();
   const [result, setResult] = useState();
-  const [turn, setTurn] = useState();
+  // const [turn, setTurn] = useState();
 
   useEffect(() => {
     initGame()
@@ -17,7 +17,7 @@ function App() {
       setBoard(game.board)
       setIsGameOver(game.isGameOver)
       setResult(game.result)
-      setTurn(game.turn)
+      // setTurn(game.turn)
   })
     return () => subscirbe.unsubscribe() 
   }, [])
@@ -35,8 +35,13 @@ function App() {
 
       )}
       <div className='board-container'>
-        <Board board={board} turn={turn} />
+        <Board board={board} />
       </div>
+      {!isGameOver && (
+          <button onClick={resetGame} className='new-game-btn'>
+          <span className='newGameBefore'>+</span>
+          </button>
+        )}
       {result && <p className='result'>{result}</p>}
     </div>
   )
