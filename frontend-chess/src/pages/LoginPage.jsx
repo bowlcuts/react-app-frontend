@@ -33,7 +33,7 @@ function LoginPage(){
   }
 
   return (
-    <div>
+    <div className='login-page'>
       <h1>Log In</h1>
       <form onSubmit={onFormSubmit}>
         <label>Email</label>

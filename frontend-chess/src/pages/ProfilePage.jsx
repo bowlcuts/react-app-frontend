@@ -80,7 +80,7 @@ function ProfilePage () {
       }
 
     return (
-        <div>
+        <div className="profile-page">
         <h1>Edit Profile</h1>
         <form onSubmit={submitFormHandler}>
           <label>Name</label>

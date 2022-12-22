@@ -88,6 +88,7 @@
 
 }
 
+
 nav {
   background-color: #4CAF50;
   color: white;
@@ -176,23 +177,36 @@ a {
 
 }
 
-.new-game-btn  {
-  background: gray;
+.new-game-btn {
+  background-color: gray;
   width: 30px;
+  height: 30px;
   margin-left: 2%;
   border-radius: 7%;
   border: none;
-  font-weight: bold;
+  font-weight: normal;
+  color: white;
+  
+}
+
+.new-game-btn span {
+  background-color: gray;
+  width: 30px;
+  height: 30px;
+  margin-left: 2%;
+  border-radius: 7%;
+  border: none;
+  font-weight: normal;
   color: white;
   transition-duration: 0.4s;
   
 }
 
-.new-game-btn :hover{
-  background-color: #4CAF50;
+.new-game-btn span:hover{
+  color: #4CAF50;
   cursor: pointer;
   font-weight: bolder;
-  
+  font-size: larger;
 }
 
 .modal-backdrop {
@@ -217,4 +231,26 @@ a {
 
 .move-history {
   color: white;
+}
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.signup-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

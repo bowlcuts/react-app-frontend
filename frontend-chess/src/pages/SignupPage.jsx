@@ -29,15 +29,21 @@ function SignupPage(){
   }
 
   return (
-    <div>
+    <div className='signup-page'>
       <h1>Sign Up</h1>
       <form onSubmit={onFormSubmit}>
-        <label>Email</label>
-        <input value={state.email} name="email" onChange={updateState} />
+        <div>
         <label>Name</label>
         <input value={state.name} name="name" onChange={updateState} />
+        </div>
+        <div>
+        <label>Email</label>
+        <input value={state.email} name="email" onChange={updateState} />
+        </div>
+        <div>
         <label>Password</label>
         <input value={state.password} name="password" onChange={updateState} type="password"/>
+        </div>
         <button>Sign Up</button>
       </form>
     </div>

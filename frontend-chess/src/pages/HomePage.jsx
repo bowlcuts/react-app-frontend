@@ -5,6 +5,8 @@ function HomePage(){
     return (
       <div className="homepage">
         
+
+        
         <Link to={`/game`}>
         <button className="home-btn">Play</button>
         </Link>
