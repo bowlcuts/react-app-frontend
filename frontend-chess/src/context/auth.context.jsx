@@ -5,14 +5,27 @@ const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 const AuthContext = createContext();
 
+
+
+
 function AuthProviderWrapper(props){
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
 
+  const [movesPieceArr, setMovesPieceArr] = useState([])
+  const [movePiece, setMovePiece, ] = useState({
+    piece: null,
+    square: null
+  })
+
+//   console.log(user)
+
   const storeToken = (token) => {
     localStorage.setItem('authToken', token)
   }
+
+  const storedToken = localStorage.getItem('authToken');
 
   const authenticateUser = () => {           //  <==  ADD  
     // Get the stored token from the localStorage
@@ -68,7 +81,13 @@ function AuthProviderWrapper(props){
       user,
       storeToken,
       authenticateUser,
-      logOutUser
+      logOutUser,
+      storedToken,
+      setUser,
+      movesPieceArr,
+      setMovesPieceArr,
+      movePiece,
+      setMovePiece
     }}>
       {props.children}
     </AuthContext.Provider>
@@ -78,5 +97,6 @@ function AuthProviderWrapper(props){
 
 export {
   AuthContext,
-  AuthProviderWrapper
+  AuthProviderWrapper,
+  
 }

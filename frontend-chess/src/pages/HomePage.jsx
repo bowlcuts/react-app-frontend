@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 function HomePage(){
     return (
-      <main>
-        <h1>This is the homepage</h1>
+      <div className="homepage">
+        
         <Link to={`/game`}>
-        <button>Play</button>
+        <button className="home-btn">Play</button>
         </Link>
         
-      </main>
+      </div>
     );
   }
   

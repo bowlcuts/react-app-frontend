@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import BoardSquare from "./BoardSquare";
-
+import { Chess } from "chess.js";
+import { AuthContext } from '../context/auth.context';
+import { useContext } from 'react';
 
 function Board ({board}) {
 
@@ -13,6 +15,7 @@ function Board ({board}) {
     // }, [board, turn])
 
     // console.log(turn, board)
+
 
     function getXYPosition(i) {
         const x = i % 8
@@ -27,6 +30,7 @@ function Board ({board}) {
     }
 
     function getPosition(i){
+        
         const { x, y } = getXYPosition(i)
         const letter = ["a", "b", "c", "d", "e", "f", "g", "h"][x]
         return `${letter}${y + 1}`

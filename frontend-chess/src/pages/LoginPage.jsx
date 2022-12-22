@@ -21,10 +21,10 @@ function LoginPage(){
 
   const onFormSubmit = e => {
     e.preventDefault();
-    console.log(state)
+    // console.log(state)
     axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, state)
       .then(axiosResponse => {
-        console.log(axiosResponse.data)
+        // console.log(axiosResponse.data)
         storeToken(axiosResponse.data.authToken);
         authenticateUser();
         navigate('/');

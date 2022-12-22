@@ -19,10 +19,10 @@ function SignupPage(){
 
   const onFormSubmit = e => {
     e.preventDefault();
-    console.log(state)
+    // console.log(state)
     axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/signup`, state)
       .then(axiosResponse => {
-        console.log(axiosResponse.data)
+        // console.log(axiosResponse.data)
         navigate('/login');
       })
       .catch(err => console.log(err));

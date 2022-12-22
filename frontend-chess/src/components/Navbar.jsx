@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import { useContext } from 'react';
 import { AuthContext } from '../context/auth.context';
+
  
 function Navbar() {
 
   const { user, isLoggedIn, logOutUser } = useContext(AuthContext);
 
   return (
-    <nav>
+    <nav className="nav">
       {isLoggedIn && (
-        <span>Welcome {user.name}!</span>
+        <span>Welcome <span className="nav-username">{user.name}</span>!</span>
       )}
 
       <Link to="/">
@@ -18,8 +19,8 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
-          <Link to="/projects">
-            <button>Projects</button>
+          <Link to="/profile">
+            <button>Profile</button>
           </Link>
           <button onClick={logOutUser}>Logout</button>
         </>

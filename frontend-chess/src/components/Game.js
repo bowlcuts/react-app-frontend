@@ -1,7 +1,10 @@
 import { Chess } from 'chess.js';
+
 //observable is a way to create some kind of data that we can subscirbe to so that we can listen to changes that are happening.
 //behavrio subject allows us to subsribe to different observables
-import { BehaviorSubject } from 'rxjs'
+import { BehaviorSubject, from } from 'rxjs';
+
+
 
 //FEN position * represents any position on a chessboard *
 let promotion = 'rnb2bnr/pppPkppp/8/4p3/7q/8/PPPP1PPP/RNBQKBNR w KQ - 1 5'
@@ -9,16 +12,21 @@ let staleMate = '4k3/4P3/4K3/8/8/8/8/8 b - - 0 1'
 let checkMate = 'rnb1kbnr/pppp1ppp/8/4p3/5PPq/8/PPPPP2P/RNBQKBNR w KQkq - 1 3'
 let insufficcientMaterial = 'k7/8/n7/8/8/8/8/7K b - - 0 1'
 
+
+
 // creating a new Chess game
 const chess = new Chess()
 
 const gameSubject = new BehaviorSubject()
+
+let movesArr = []
 
 function initGame(){
     updateGame()
 }
 
 function resetGame() {
+    movesArr = []
     chess.reset()
     updateGame()
 }
@@ -37,8 +45,12 @@ function handleMove(from, to){
    
 }
 
+
+
 function move (from, to, promotion){
-    console.log(from, to)
+    // console.log(from, to)
+    movesArr.push({from: from, to: to})
+    // console.log('moves array', movesArr)
     let tempMove = {from, to}
     if(promotion) {
         tempMove.promotion = promotion
@@ -56,7 +68,7 @@ function updateGame(pendingPromotion) {
         board: chess.board(),
         pendingPromotion,
         isGameOver,
-        // turn: chess.turn(),
+        turn: chess.turn(),
         result: isGameOver ? getGameResult() : null
     }
 
@@ -86,5 +98,6 @@ export {
     move,
     initGame,
     handleMove,
-    resetGame
+    resetGame,
+    movesArr
 };

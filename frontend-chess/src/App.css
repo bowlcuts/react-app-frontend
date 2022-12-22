@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 .container {
@@ -87,7 +88,76 @@
 
 }
 
-button {
+nav {
+  background-color: #4CAF50;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+
+nav a {
+  background-color: #4CAF50;
+}
+
+.nav-username {
+  color: rgb(34, 34, 34);
+}
+
+nav button {
+  background: #4CAF50;
+  height: 30px;
+  width: 150px;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+nav button:hover {
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  background-color: rgb(34, 34, 34);
+  border-radius: 15px;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 40vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-btn {
+  background-color: #4CAF50;
+  height: 300px;
+  width: 350px;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  transition-duration: 0.4s;
+
+}
+
+
+.home-btn:hover {
+  color: #4CAF50;
+  cursor: pointer;
+  font-weight: bolder;
+  background-color: rgb(34, 34, 34);
+  border-radius: 15px;
+}
+
+.new-game-button {
   background: rgb(34, 34, 34);
   height: 30px;
   width: 150px;
@@ -99,7 +169,7 @@ button {
   margin-top: 30px;
 }
 
-button:hover {
+.new-game-button:hover {
   background-color: #4CAF50;
   cursor: pointer;
   font-weight: bolder;
@@ -123,4 +193,28 @@ button:hover {
   cursor: pointer;
   font-weight: bolder;
   
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-content {
+  width: 60%;
+  min-height: 200px;
+  background-color: white;
+  padding: 25px;
+}
+
+.move-history {
+  color: white;
 }
