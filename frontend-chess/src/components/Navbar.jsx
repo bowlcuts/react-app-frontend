@@ -22,7 +22,9 @@ function Navbar() {
           <Link to="/profile">
             <button>Profile</button>
           </Link>
+          <Link to="/">
           <button onClick={logOutUser}>Logout</button>
+          </Link>
         </>
       )}
 

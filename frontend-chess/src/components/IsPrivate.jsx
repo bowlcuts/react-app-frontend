@@ -7,7 +7,7 @@ function IsPrivate(props){
 
   if(isLoading) return <p>Loading...</p>;
 
-  if(!isLoggedIn) return <Navigate to="/login" />
+  if(!isLoggedIn) return <Navigate to="/signup" />
 
   return props.children;
 };
