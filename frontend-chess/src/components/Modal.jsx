@@ -20,11 +20,12 @@ const Modal = ({ setPassword, closeModal, handleDelete, showModal  }) => {
                 }}
               >
                 <h3>Enter password to delete account.</h3>
-                <input type='text' name="password" onChange={(e) => {setPassword(e.target.value)}}/>
+                <input type='password' name="password" onChange={(e) => {setPassword(e.target.value)}}/>
 
-
-                <button onClick={closeModal}>Cancel</button>
-                <button onClick={handleDelete}>Delete account</button>
+                
+                <button className="modal-cancel" onClick={closeModal}>Cancel</button>
+                <button className="modal-delete" onClick={handleDelete}>Delete account</button>
+                
               </div>
             </div>
           ) 

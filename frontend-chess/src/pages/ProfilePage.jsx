@@ -83,13 +83,16 @@ function ProfilePage () {
         <div className="profile-page">
         <h1>Edit Profile</h1>
         <form onSubmit={submitFormHandler}>
+        <div className="profile-name">
           <label>Name</label>
           <input onChange={updateState} value={state.name} name="name" />
+          </div>
+          <div className="profile-email">
           <label>Email</label>
           <input onChange={updateState} value={state.email} name="email" />
-          <button>Save Changes</button>
-        </form>
-        <button onClick={() => {setShowModal(!showModal)}}>Delete Profile</button>
+          </div>
+          <button className="profile-save">Save Changes</button>
+          <button className="profile-delete" onClick={() => {setShowModal(!showModal)}}>Delete Profile</button>
         <Modal 
         setPassword={setPassword}
 
@@ -102,8 +105,10 @@ function ProfilePage () {
         showModal={showModal}
 
         />
+        </form>
+    
 
-        {/* setPassword, closeModal, handleDelete, showModal */}
+
       </div>
     );
 };

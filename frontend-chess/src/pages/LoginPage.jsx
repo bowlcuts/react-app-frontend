@@ -33,13 +33,17 @@ function LoginPage(){
   }
 
   return (
-    <div className='login-page'>
+    <div className='profile-page'>
       <h1>Log In</h1>
       <form onSubmit={onFormSubmit}>
+        <div className='profile-email'>
         <label>Email</label>
         <input value={state.email} name="email" onChange={updateState} />
+        </div>
+        <div className='profile-name'>       
         <label>Password</label>
         <input value={state.password} name="password" onChange={updateState} type="password"/>
+        </div>
         <button>Log In</button>
       </form>
     </div>

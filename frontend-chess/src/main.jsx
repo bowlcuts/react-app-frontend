@@ -9,13 +9,13 @@ import { AuthProviderWrapper } from './context/auth.context';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
       <AuthProviderWrapper>
         <DndProvider backend={HTML5Backend}>
           <App />
         </DndProvider>
       </AuthProviderWrapper>
-    </BrowserRouter>
-  </React.StrictMode>,
+    </BrowserRouter>,
+  {/* </React.StrictMode>, */}
 )

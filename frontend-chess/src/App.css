@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  
+  font-family: sans-serif;
 }
 
 .container {
@@ -130,7 +130,7 @@ nav button:hover {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 40vh;
+  top: 30vh;
 }
 
 a {
@@ -219,6 +219,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 2;
 }
 
@@ -227,18 +228,135 @@ a {
   min-height: 200px;
   background-color: white;
   padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.move-history {
-  color: white;
+.modal-content h3 {
+  padding-bottom: 15px;
 }
+
+.modal-content input {
+  border: rgb(34, 34, 34) solid 2px;
+  border-radius: 15px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition-duration: 0.4s;
+  margin-bottom: 15px;
+}
+
+.modal-content input:hover {
+  border: #4CAF50 solid 2px;
+}
+
+.modal-content button {
+  margin-bottom:15px ;
+}
+
+
+/* .move-history {
+  color: white;
+  margin-left: 15px;
+  background-color: rgb(52, 52, 52);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  line-height: 1.4;
+  
+} */
 
 .profile-page {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
+  font-family: sans-serif;
+}
+
+.profile-page form {
+  display: flex;
+  flex-direction: column;
+  border: solid rgb(34, 34, 34) 3px;
+  border-radius: 50px;
+  height: 250px;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.profile-page button {
+  background: #4CAF50;
+  height: 30px;
+  width: 150px;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+.profile-page button:hover {
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  background-color: rgb(34, 34, 34);
+  border-radius: 15px;
+}
+.profile-name label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 3px;
+}
+
+.profile-name input {
+  border: rgb(34, 34, 34) solid 2px;
+  border-radius: 15px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+ 
+.profile-email label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 3px;
+}
+
+.profile-email input {
+  border: rgb(34, 34, 34) solid 2px;
+  border-radius: 15px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+.profile-name input:hover {
+  border: #4CAF50 solid 2px;
   
+}
+
+.profile-email input:hover {
+  border: #4CAF50 solid 2px;
 }
 
 .signup-page {

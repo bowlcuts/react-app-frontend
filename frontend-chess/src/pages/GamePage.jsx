@@ -43,7 +43,7 @@ return (
         </button>
       )}
     {result && <p className='result'>{result}</p>}
-    {movesArr.length ? 
+    {/* {movesArr.length ? 
     <div>
         {movesArr.map((move) => {
             return (
@@ -56,7 +56,7 @@ return (
             )
         })}
     </div> : null
-    }
+    } */}
   </div>
 )
 }
